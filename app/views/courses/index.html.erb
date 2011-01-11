@@ -1,0 +1,29 @@
+<h1>Lijst vakken:</h1>
+
+<table>
+  <tr>
+    <th>Docent</th>
+    <th>Vak</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @courses.each do |course| %>
+  <tr>
+    <td><%= course.docent %></td>
+    <td><%= course.vak %></td>
+    <td><%= link_to 'Bekijken', course %></td>
+    <td><%= link_to 'Aanpassen', edit_course_path(course) %></td>
+    <td><%= link_to 'Verwijderen', course, :confirm => 'Bent u zeker dat u het vak wil verwijderen?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nieuw vak', new_course_path %>
+
+<br />
+
+<a href="http://localhost:3000/">Ga terug naar hoofdpagina</a>

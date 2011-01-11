@@ -1,4 +1,4 @@
-<h1>Listing users</h1>
+<h1>Lijst gebruikers</h1>
 
 <table>
   <tr>
@@ -17,13 +17,17 @@
     <td><%= user.achternaam %></td>
     <td><%= user.email %></td>
     <td><%= user.paswoord %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Bekijken', user %></td>
+    <td><%= link_to 'Aanpassen', edit_user_path(user) %></td>
+    <td><%= link_to 'Verwijderen', user, :confirm => 'Bent u zeker dat u deze gebruiker wilt verwijderen', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Nieuwe gebruiker', new_user_path %>
+
+<br />
+
+<a href="http://localhost:3000/">Ga terug naar hoofdpagina</a>
